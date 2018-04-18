@@ -1,14 +1,13 @@
 pragma solidity ^0.4.0;
 
 
-contract MyToken
-{
+contract MyToken {
     uint8 myNumber = 5;
     address owner;
     mapping (address => uint256) public balances;
     
     function MyToken () public {
-        // msg.sender gives the address of whom ever created the contract
+        // msg.sender gives the address of whom ever is calling the contract
         // you can give percentages to different addresses
         owner = msg.sender;
         // set the number of tokens of the owner that's the supply
